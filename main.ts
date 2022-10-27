@@ -27,11 +27,34 @@ function 燈數 (num: number) {
         x = num - 23
         y = 2
     }
-    led.plot(x, y)
 }
+function call () {
+    change = 1
+    左右()
+    上下()
+    change = 1
+}
+function 左右 () {
+    for (let index = 0; index < 次; index++) {
+        led.plot(a, b)
+        a += change
+    }
+    basic.pause(100)
+}
+function 上下 () {
+    for (let index = 0; index < 次; index++) {
+        led.plot(a, b)
+        b += change
+    }
+    basic.pause(100)
+}
+let b = 0
+let 次 = 0
+let change = 0
 let y = 0
 let x = 0
 let a = 0
+a = 0
 basic.forever(function () {
     a += 1
     燈數(a)
